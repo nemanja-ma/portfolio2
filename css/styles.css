@@ -1,5 +1,47 @@
+.body {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    letter-spacing: 1px;
+}
+
+.row-plus{
+    margin-bottom: 100px;
+}
 
 .carousel-caption {
-    top: 60%;
+    top: 55%;
     transform: translateY(-50%);
 }
+.carousel-item:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.7);
+  }
+
+  .carousel-caption h5{
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin-bottom: 1em;
+    text-shadow: 0px, 2px, 5px, rgba(0,0,0,0.4);
+  }
+ 
+  .carousel-inner .carousel-item {
+    transition: -webkit-transform 3s ease;
+    transition: transform 3s ease;
+    transition: transform 3s ease, -webkit-transform 3s ease;
+  }
+
+  .aboutimage {
+      max-width: 100%;
+  }
+
+  .skills{
+      background-color: #d3d7cf;
+
+  }
