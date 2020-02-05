@@ -1,52 +1,65 @@
+
+
+//loader 
+
+$(window).on("load", function(){
+    $(".loader").hide(500);
+})
+
 $(document).ready(function(){
 
     var typed = new Typed(".typed", {
-        strings: ["Frontend Web Developer.", "Design Enthusiast.", "Fullstack wannabe."],
-        typeSpeed: 30,
-        loop: true,
+        strings: [`My name is Nemanja, or Nemke in short, I'm a Frontend Web Developer, Desigh Enthusiast and a Fullstack Wannabe`],
+        typeSpeed: 20,
+        loop: false,
         startDelay: 500,
         showCursor: false
     });
 
+    //skills -owl carousel
     
-    
-    var skillsTopOffset = $('.skillsSection').offset().top;
-    $(window).scroll(function(){
-        if (window.pageYOffset > skillsTopOffset - $(window).height()+400) {
-            
-            $('.owl-carousel').owlCarousel({
-                loop:true,
-                margin: 50,
-                nav:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    480:{
-                        items:2
-                    },
-                    768:{
-                        items:3
-                    },
-                    938:{
-                        items:4
-                    }
-                }
-            })
 
-            jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 3000
-
-            $('.chart').easyPieChart({
-            animate: ({ duration: 2000, enabled: true }),
-            onStep: function(from, to, percent) {
-                $(this.el).find('.percent').text(Math.round(percent))
+    $('.owl-carousel').owlCarousel({
+        nav:false,
+        loop:true,
+        responsive:{
+            0:{
+                items:2
+            },
+            480:{
+                items:8
+            },
+            768:{
+                items:8
+            },
+            938:{
+                items:8
             }
-            });
         }
-    });
+    });           
+
+
+
+    //sticky nav
+
+    const nav = $("#navigation");
+    const navTop = nav.offset().top;
+
+    $(window).on("scroll", stickyNavigation);
+
+    function stickyNavigation() {
+        var body = $("body");
+        if ($(window).scrollTop() >= navTop ) {
+            body.css("padding-top", nav.outerHeight() + "px");
+            body.addClass("fixedNav");
+        } 
+        else {
+            body.css("padding-top", 0);
+            body.removeClass("fixedNav")
+        }
+    }
 
 
 });
 
     
-

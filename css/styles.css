@@ -1,114 +1,190 @@
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .body {
-    font-size: 14px;
-    color: #333;
-    background-color: #fff;
-    letter-spacing: 1px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  letter-spacing: 1px;
 }
 
-.row-plus{
-    margin-bottom: 50px;
+.container-plus{
+  padding: 5em 0;
 }
 
-.carousel-caption {
-    top: 55%;
-    transform: translateY(-50%);
+.container-plus{
+  padding: 2em 0;
 }
-.carousel-item:after {
-    content:"";
-    display:block;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background:rgba(0,0,0,0.7);
-  }
 
-  .carousel-caption h5{
-    font-size: 2em;
-    letter-spacing: 0.1em;
-    margin-bottom: 1em;
-    text-shadow: 0px, 2px, 5px, rgba(0,0,0,0.4);
-  }
- 
-  .carousel-inner .carousel-item {
-    transition: -webkit-transform 3s ease;
-    transition: transform 3s ease;
-    transition: transform 3s ease, -webkit-transform 3s ease;
-  }
-
-  .aboutimage {
-      max-width: 100%;
-  }
-
-  .skillsSection{
-      background-color: #d3d7cf;
-      height: 500px;
-        text-align: center;
-  }
-  .skills .container {
-      padding: 20px 0;
-  }
-
-  .chart{
-    position: relative;
-    width: 110px;
-    height: 110px;
-    display: inline-block;
-    text-align: center;
-  }
-  .chart canvas{
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .chart .percent {
-      line-height: 110px;
-      display: inline-block;
-      font-size: 30px;
-  }
-  .chart .percent:after {
-    content:'%';
-  }
-
-  .squareItem{
-    margin-top: 30px;
-    position: relative;
+.loader {
+  width: 100%;  
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   }
   
-  .squareInnerContainer{
+  .loader i {
     position: relative;
-    padding: 50px 15px 35px;
-    text-align: center;
-    border: 2px solid #444;
-    border-top:none;
+    top: 50vh;
+    left: 50%;
+    z-index: 1001;
+    }
+
+
+
+/* --------------------------- HERO ------------------------------*/
+
+.hero{
+  margin: 0;
+  padding: 0;
+}
+
+.hero-text-box{
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url(../img/hero1.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.jumbotron {
+  margin: 0;
+  padding: 0;
+}
+
+.greeting-message {
+  padding-top: 15vh;
+  font-size: 200%;  
+  color: white;
+}
+
+.hero-text-box a, h2, .icons{
+  margin: 2em 1em;
+}
+.icons a:hover{
+  color: white;
+}
+
+
+/* --------------------------- NAV ------------------------------*/
+
+
+.navbar {
+  background-color: #333;
+  padding: 10px 5px;
+  z-index: 100;
+  width: 100%;
+}
+
+#navigation li {
+  color: white;
+  padding:0 10px;
+  margin: 0 10px;
   }
 
-.squareInnerContainer:before,
-  .squareInnerContainer:after  {
-    content: '';
-    position: absolute;
-    top: 0px;
-    width: 30%;
-    border-bottom: 2px solid #444;
-  }
+#navigation li a {
+  color: white;
+}
 
-  .squareInnerContainer:before {
-    right:0px;
-  }
+.navbar-brand {
+  color: white;
+  font-size: 150%;
+}
 
-  .squareInnerContainer:after {
-    left:0px;
-  }
-  .squareContent h2 {
-    font-size:56px;
-    margin-bottom:10px;
-    font-weight: 400;
-    color: #e74c3c
-  }
+.navbar-brand:hover {
+  color: white;
+}
 
-  .squareContent h3 {
-    font-size:13px;
-    margin:0px;
-    font-weight: 600;
-  }
+.navbar i {
+  color: white;
+}
+.fixedNav .navbar {
+  position: fixed;
+  top: 0;
+}
+
+.navbar-collapse button i{
+  color: gray;
+  margin-right: 10px ;
+}
+
+
+
+
+/* --------------------------- SKILLS ------------------------------*/
+
+.skillsSection {
+  background: whitesmoke;
+}
+.skillsSection p {
+  text-align: center;
+}
+.skillsSection img {
+  max-width: 100%;
+}
+.skill
+
+
+
+
+/* --------------------------- PROJECTS ------------------------------*/
+
+
+
+.devToolsImages {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.devToolsImages img {
+  height: 45px;
+  width: 45px;
+}
+
+.card-body-1 {
+  margin-bottom: 50px;
+}
+
+/* --------------------------- ABOUT ------------------------------*/
+
+
+.aboutimage {
+  max-width: 100%;
+}
+
+.about {
+  background: whitesmoke;
+}
+
+
+
+
+
+/* --------------------------- CONTACT ------------------------------*/
+
+
+.contactBtn {
+  margin-top: 1em;
+}
+
+.copyrightSection {
+  background-color: #000;
+  color: #fff;
+  padding: 30px 5px;
+}
+
+.copyrightSection p {
+  margin: 0;
+}
+
+
+
