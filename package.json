@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run lite",
-    "lite": "lite-server",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "lite": "lite-server"
   },
   "author": "",
   "license": "ISC",
