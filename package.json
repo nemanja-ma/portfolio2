@@ -36,7 +36,7 @@
     "rimraf": "^3.0.2",
     "uglifyjs": "^2.4.11",
     "usemin-cli": "^0.5.1",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -49,6 +49,6 @@
     "popper.js": "^1.16.0",
     "slick-carousel": "^1.8.1",
     "typed.js": "^2.0.11",
-    "webpack": "^4.41.5"
+    "webpack": "^5.75.0"
   }
 }
